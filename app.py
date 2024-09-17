@@ -8,7 +8,6 @@ def fetch_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=80668b158739828caac25bb7f4488dad&language=en-US"
     data = requests.get(url)
     data = data.json()
-    st.text(data)
     if 'poster_path' in data:
         poster_path = data['poster_path']
         full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
@@ -54,7 +53,7 @@ selected_movie_names = st.selectbox(
 
 if st.button('Show Recommendation'):
     recommended_movie_names, recommended_movie_posters = recommend(selected_movie_names)
-    col1, col2, col3, col4, col5 = st.beta_columns(5)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         st.text(recommended_movie_names[0])
         st.image(recommended_movie_posters[0])
