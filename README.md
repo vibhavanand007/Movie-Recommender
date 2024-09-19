@@ -1,3 +1,3 @@
-## Movie Recommendation end-to-end project
+## Movie Recommendation end-to-end project with live link
 
-live-link >> https://moviesercommender.streamlit.app/
+live-link >> https://moviesrecommender0.streamlit.app/ (using Streamlit)
